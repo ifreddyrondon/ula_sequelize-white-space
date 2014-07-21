@@ -5,6 +5,7 @@
 
 var express = require('express'), 
     routes = require('./routes'),
+    upload = require('./routes/upload'),
     user = require('./routes/user'),
     place = require('./routes/place'),
     coordinate = require('./routes/coordinate'),
@@ -32,6 +33,9 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
+
+app.post('/upload', upload.upload);
+
 app.post('/users', user.create);
 app.post('/places', place.create);
 app.post('/places/:id_name/coordinate', coordinate.create);
