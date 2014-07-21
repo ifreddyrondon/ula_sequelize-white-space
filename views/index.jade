@@ -1,5 +1,11 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	h1= title
+		p Welcome to #{title}
+		form(enctype="multipart/form-data", action="/", method="post")
+			input(id="zone", name="zone", autocorrect="on", type="text", value="")
+			br
+			input(type="file", multiple="multiple", name="data", id="data")
+			br
+			input(type="submit", value="Synchronize", style="width:200px;height:40px;padding-top:6px")
