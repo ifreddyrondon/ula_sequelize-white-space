@@ -10,6 +10,26 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       validate: { min: -180, max: 180 }
     },
+    numberPotencyFrequency: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    potencyMin: {
+      type: DataTypes.FLOAT,
+      allowNull: true,
+    },
+    potencyMax : {
+      type: DataTypes.FLOAT,
+      allowNull: true,
+    },
+    potencyAvg : {
+      type: DataTypes.FLOAT,
+      allowNull: true,
+    },
+    potencySD : {
+      type: DataTypes.FLOAT,
+      allowNull: true,
+    },
     createdDate : {
       type: DataTypes.STRING,
       allowNull: true,
