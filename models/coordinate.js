@@ -1,33 +1,34 @@
 module.exports = function(sequelize, DataTypes) {
   var Coordinate = sequelize.define('Coordinate', {
     latitude: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.DECIMAL(20,15),
       allowNull: false,
       validate: { min: -90, max: 90 }
     },
     longitude: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.DECIMAL(20,15),
       allowNull: false,
       validate: { min: -180, max: 180 }
     },
     numberPotencyFrequency: {
       type: DataTypes.INTEGER,
       allowNull: true,
+      defaultValue: 0,
     },
     potencyMin: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.DECIMAL(10,6),
       allowNull: true,
     },
     potencyMax : {
-      type: DataTypes.FLOAT,
+      type: DataTypes.DECIMAL(10,6),
       allowNull: true,
     },
     potencyAvg : {
-      type: DataTypes.FLOAT,
+      type: DataTypes.DECIMAL(10,6),
       allowNull: true,
     },
     potencySD : {
-      type: DataTypes.FLOAT,
+      type: DataTypes.DECIMAL(10,6),
       allowNull: true,
     },
     createdDate : {

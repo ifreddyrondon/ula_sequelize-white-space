@@ -6,7 +6,8 @@ var fs        = require('fs'),
       dialect: 'mysql',
       dialectOptions: {
         socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock',
-      }
+      },
+      logging: false,
     }),
     db        = {};
 

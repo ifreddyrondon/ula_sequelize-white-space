@@ -1,11 +1,11 @@
 module.exports = function(sequelize, DataTypes) {
   var PotencyFrequency = sequelize.define('PotencyFrequency', {
-    potency: { 
-    	type: DataTypes.FLOAT,
+    frequency: { 
+      type: DataTypes.DECIMAL(10,2),
       allowNull: false,
     },
-    frequency: { 
-      type: DataTypes.FLOAT,
+    potency: { 
+    	type: DataTypes.DECIMAL(20,15),
       allowNull: false,
     }
   }, {

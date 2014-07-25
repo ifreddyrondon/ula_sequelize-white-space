@@ -5,6 +5,15 @@ exports.create = function(req, res) {
   	email: 'spantons@gmail.com',
   	password: '123123'
   }).success(function() {
-    res.redirect('/');
+    // res.redirect('/');
+
+    db.Place.create({ 
+  		name: '123',
+  		UserId: 1
+  	}).success(function() {
+    	res.redirect('/');
+  	});
+
+
   });
 };

@@ -43,7 +43,7 @@ app.post('/places/:id_name/:id_coordinate/potencyFrequency', potencyFrequency.cr
 
 db
   .sequelize
-  .sync({ force: true })
+  .sync({ force: false })
   .complete(function(err) {
     if (err) {
       throw err[0];
